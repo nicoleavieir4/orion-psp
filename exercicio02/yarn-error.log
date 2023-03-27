@@ -1,0 +1,39 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.19/libexec/bin/yarn.js add prompt-sync
+
+PATH: 
+  /usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/nicolevieira/Library/Application Support/JetBrains/Toolbox/scripts:/Users/nicolevieira/Library/Application Support/JetBrains/Toolbox/scripts
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.14.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: connect EHOSTUNREACH 2606:4700::6810:1423:443 - Local (:::53297)
+      at internalConnect (node:net:1066:16)
+      at defaultTriggerAsyncIdScope (node:internal/async_hooks:464:18)
+      at emitLookup (node:net:1323:9)
+      at /usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:103587:28
+      at /usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:103496:13
+      at module.exports.RawTask.call (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:79584:19)
+      at flush (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:79666:29)
+      at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+
+npm manifest: 
+  {
+    "name": "exercicio02",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
