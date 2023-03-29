@@ -1,6 +1,4 @@
 // Inserir dados de um aluno e as notas dos 4 bimestres, ao final, calcular a média das notas.
-// 10 alunos dentro de um array
-// for que printa a lista de alunos e a media
 // perguntar quantos alunos o user deseja inserir, enquanto a qtd de alunos for < que a qtd de alunos informados, repete o formulario
 
 const prompt = require("prompt-sync")();

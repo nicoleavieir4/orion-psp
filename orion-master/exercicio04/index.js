@@ -9,7 +9,7 @@ do {
   const aluno = {
     nome: "",
     notas: [],
-    media: 0,
+    media: 0, 
   };
 
   aluno.nome = prompt("Qual nome do(a) aluno(a)?");
@@ -20,7 +20,7 @@ do {
     aluno.notas[i] = parseInt(prompt(`Qual nota ${i+1} do(a) aluno(a)?`));
   }
 
-  aluno.media = escola.calcularMediaAluno(aluno);
+  aluno.media = escola.calcMedAlunoFuncaoExterna(aluno);
   aluno.resultadoFinal = final.resultadoFinal(aluno.media);
   alunos.push(aluno);
 
