@@ -3,7 +3,7 @@
 
 const prompt = require("prompt-sync")();
 const escola = require("./calculaMediaAluno");
-
+ 
 const alunos = [0, 0, 0];
 
 for (var i = 0; i < alunos.length; i++) {

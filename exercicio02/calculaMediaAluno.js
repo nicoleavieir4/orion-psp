@@ -7,7 +7,7 @@ function calcularMediaAluno(aluno) {
     aluno.nota3,
     aluno.nota4
   );
- 
+  
   console.log(`O(a) aluno(a) ${aluno.nome} tem a média de ${mediaAluno}.`);
 }
 

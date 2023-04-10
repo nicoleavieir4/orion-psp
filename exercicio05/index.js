@@ -4,9 +4,6 @@
 // calcular a diferenca entre a soma dos numeros pares e impares (resultadoSomaPar - resultadoSomaImpar)
 // multiplicar todos os numeros pares
 
-// tudo é um array
-// refatorar as funcoes (transformar em uma só)
-
 const prompt = require("prompt-sync")();
 const calc = require("./calc");
 
@@ -20,33 +17,36 @@ for (var i = 0; i <= qtdNum; i++) {
   } else {
     impares.push(i);
   }
-}
+} 
 
-function somando(pares, impares) {
-  const resultadoSomaPar = pares.reduce((acumulador, valorAtual) =>
+function somando(valores){
+  const resultSoma = valores.reduce((acumulador, valorAtual) =>
     calc.soma(acumulador, valorAtual)
   );
-
-  const resultadoSomaImpar = impares.reduce((acumulador, valorAtual) =>
-    calc.soma(acumulador, valorAtual)
-  );
-
-  return { resultadoSomaPar, resultadoSomaImpar };
+  return resultSoma
 }
 
-const { resultadoSomaPar, resultadoSomaImpar } = somando(pares, impares);
-const difSub = calc.sub(resultadoSomaPar, resultadoSomaImpar);
+function multiplicando(valores) {
+  const resultMult = valores.reduce((acumulador, valorAtual) => {
+    const fator1 = valorAtual == 0 ? 1 : valorAtual;
+    const fator2 = acumulador == 0 ? 1 : acumulador;
 
-function multiplicando(pares) {
-  const resultado = [];
-  for (var i = 0; i < pares.length; i++) {
-    resultado.push(pares[i] * pares[i]);
-  }
-  return resultado;
+    const produto = calc.mult(fator1, fator2);
+    // console.log(`Acumulador: ${acumulador}, Valor atual: ${valorAtual}, Produto: ${produto}`);
+    return produto;
+  });
+
+  return resultMult;
 }
+
+const resultadoSomaPar = somando(pares)
+const resultadoSomaImpar = somando(impares)
+const difSub = calc.sub(resultadoSomaPar, resultadoSomaImpar)
 
 console.log("Números Pares: ", pares);
 console.log("Números Ímpares: ", impares);
-console.log(somando(pares, impares));
+console.log(`A soma de pares é ${resultadoSomaPar}.`);
+console.log(`A soma de impares é ${resultadoSomaImpar}`);
 console.log(`A diferença entre a soma dos pares e ímpares é de ${difSub}`);
-console.log(multiplicando(pares));
+console.log(`A multiplicação de pares é ${multiplicando(pares)}.`);
+console.log(`A multiplicação dos impares é ${multiplicando(impares)}.`);
