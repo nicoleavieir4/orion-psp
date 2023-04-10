@@ -55,8 +55,6 @@ function playerPlay() {
   console.log("3 - Tesoura");
   console.log("S - Sair");
 
-  //laco de repeticao do while --  escolha != "S" repete --
-
   const escolha = prompt("Escolha uma opção:");
 
   switch (escolha) {
