@@ -1,19 +1,3 @@
-/*
-O primeiro passo consiste em solicitar o nome do jogador;
-Em seguida, no terminal devemos exibir as 3 opções para o jogador:
-
-1 - Pedra, 2 - Tesoura, 3 - Papel, (S) - Sair;
-
-Quando o jogador selecionar umas da opções, o algoritmo deve sortear um numero entre 1 e 3 de acordo com a regras do jogo respectivamente.
-Na sequencia uma comparação entre o numero sorteado e o que foi escolhido pelo jogador deve ser feita, e um ponto deve ser adicionado para o vencedor da rodada.
-Se o jogador escolher a opção (S) - Sair, a pontuação deve ser exibida mostrando:
-'Parabéns {nome do jogador}, você venceu'
-caso o jogador tenha feito o maior numero de pontos
-ou
-'Parece que vc está sem sorte e perdeu para o robo'
-caso o robô tenha vencido.
-Em ambos os casos o total de pontos deve ser exibido.
-*/
 const prompt = require("prompt-sync")();
 
 const score = {
@@ -88,6 +72,7 @@ while (escolha != "S") {
     "Deseja jogar novamente? Digite S para sair ou qualquer outra tecla para continuar."
   );
 }
+
 
 console.log(`Player: ${score.player}`);
 console.log(`Computer: ${score.computer}`);
