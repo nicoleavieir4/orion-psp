@@ -97,35 +97,3 @@ if (score.play > score.computer) {
 } else {
   console.log("Parece que vc está sem sorte e perdeu para o robô.");
 }
-
-//   switch (escolha) {
-//     case "S":
-//       //escolha === "S";
-//       console.log("Até a próxima!");
-//       break;
-//     case "isNaN(parseInt(escolha)) || parseInt(escolha) < 1 || parseInt(escolha) > 3":
-//       console.log(
-//         "Opção inválida! Por favor, escolha uma das opções listadas."
-//       );
-//       break;
-//     default:
-//       const jogada = select[parseInt(escolha) - 1];
-//       console.log(`Você escolheu ${jogada}!`);
-//       console.log(
-//         `Placar: Jogador ${play.playerScore} x ${play.computerScore} Máquina`
-//       );
-
-//       return jogada;
-//   }
-
-//   if (escolha === "S") {
-//     console.log("Até a próxima!");
-//   } else if (isNaN(parseInt(escolha)) || parseInt(escolha) < 1 || parseInt(escolha > 3)) {
-//     console.log("Opção inválida! Por favor, escolha uma das opções listadas.");
-//     return playerPlay()
-//   } else {
-//     const jogada = select[parseInt(escolha) - 1];
-//     console.log(`Você escolheu ${jogada}!`)
-//     return jogada;
-//   }
-// }
