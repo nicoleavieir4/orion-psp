@@ -1,24 +1,33 @@
-const computer = require("./play");
+const score = {
+  player: 0,
+  computer: 0,
+};
 
-function playing(playerSelection, computerSelection) {
-  if (playerSelection === computerSelection) {
-    return "Empate!";
+function game(playerChoiceIndex) {
+  const botChoiceIndex = Math.floor(Math.random() * 3);
+  const select = ["Pedra", "Papel", "Tesoura"];
+  const playerChoice = select[playerChoiceIndex];
+  const botChoice = select[botChoiceIndex];
+
+  console.log(`O computador escolheu ${botChoice}.`);
+  console.log(`O computador escolheu ${botChoiceIndex}.`);
+
+  if (playerChoice === botChoice) {
+    console.log("Empate!");
   } else if (
-    (playerSelection === "Pedra" && computerSelection === "Tesoura") ||
-    (playerSelection === "Papel" && computerSelection === "Pedra") ||
-    (playerSelection === "Tesoura" && computerSelection === "Papel")
+    (playerChoice === "Pedra" && botChoice === "Tesoura") ||
+    (playerChoice === "Papel" && botChoice === "Pedra") ||
+    (playerChoice === "Tesoura" && botChoice === "Papel")
   ) {
-    return `Você ganhou! ${playerSelection} vence ${computerSelection}.`;
+    console.log(`Você ganhou! ${playerChoice} vence ${botChoice}.`);
+    score.player++;
   } else {
-    return `Você perdeu! ${computerSelection} vence ${playerSelection}.`;
+    console.log(`Você perdeu! ${botChoice} vence ${playerChoice}.`);
+    score.computer++;
   }
 }
 
-const playerSelection = player
-const computerSelection = computer
-
-playing(playerSelection, computerSelection);
-
 module.exports = {
-  playing
-}
+  score,
+  game
+};
