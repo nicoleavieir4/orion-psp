@@ -19,7 +19,7 @@ let carrinho = {};
 let finalizarCompra = false;
 
 do {
-  console.log("Selecione os itens do carrinho:" + produtos);
+  console.log("Selecione os itens do carrinho:");
 
   for (const codigo in produtos) {
     console.log(
